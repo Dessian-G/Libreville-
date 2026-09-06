@@ -7,43 +7,49 @@ export interface Service {
 }
 
 // Titres et modules de "Formation" fournis par le CLAUDE.md — connus, à saisir tels quels.
-// Descriptions : TODO, non fournies — ne rien inventer, une phrase de marketing
-// inventée serait présentée comme réelle.
+// Descriptions : rédaction de démarrage (voir CLAUDE.md §13) — génériques, ne
+// décrivent pas un projet ou un client réel précis. À ajuster librement.
 export const services: Service[] = [
   {
     id: "sites-web",
     title: "Création de sites web",
-    description: "", // TODO: description courte (1-2 phrases) à rédiger
+    description:
+      "Des sites vitrines et e-commerce rapides, responsives et pensés pour convertir vos visiteurs en clients.",
     icon: "Globe",
   },
   {
     id: "applications",
     title: "Applications",
-    description: "", // TODO
+    description:
+      "Conception d'applications web et mobiles sur mesure, adaptées aux besoins spécifiques de votre activité.",
     icon: "Smartphone",
   },
   {
     id: "design-graphique",
     title: "Design graphique",
-    description: "", // TODO
+    description:
+      "Identité visuelle, supports imprimés et visuels pour réseaux sociaux, pensés pour renforcer votre image de marque.",
     icon: "Palette",
   },
   {
     id: "publicite-ia",
     title: "Publicité avec IA",
-    description: "", // TODO
+    description:
+      "Création et optimisation de campagnes publicitaires grâce à l'intelligence artificielle, pour toucher la bonne audience au bon moment.",
     icon: "Megaphone",
   },
   {
     id: "branding",
     title: "Branding",
-    description: "", // TODO
+    description:
+      "Construction d'une identité de marque forte et cohérente, du logo au ton éditorial.",
     icon: "Fingerprint",
   },
   {
     id: "formation",
     title: "Formation",
-    description: "", // TODO
+    description:
+      "Initiation et perfectionnement pour vos équipes, sur les outils numériques comme sur les usages de l'intelligence artificielle.",
     icon: "GraduationCap",
     items: [
       "Informatique",
@@ -56,13 +62,15 @@ export const services: Service[] = [
   {
     id: "creation-contenu",
     title: "Création de contenu",
-    description: "", // TODO
+    description:
+      "Textes, visuels et vidéos pensés pour votre audience, adaptés à chaque canal de diffusion.",
     icon: "PenSquare",
   },
   {
     id: "solutions-ia",
     title: "Solutions IA",
-    description: "", // TODO
+    description:
+      "Automatisation, chatbots et outils sur mesure propulsés par l'intelligence artificielle pour optimiser votre activité.",
     icon: "Cpu",
   },
 ];

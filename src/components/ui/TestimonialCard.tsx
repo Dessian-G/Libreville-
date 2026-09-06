@@ -18,7 +18,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
             size={16}
             className={
               index < testimonial.rating
-                ? "fill-[var(--color-accent)] text-[var(--color-accent)]"
+                ? "fill-[var(--color-yellow)] text-[var(--color-yellow)]"
                 : "text-[var(--color-border)]"
             }
           />

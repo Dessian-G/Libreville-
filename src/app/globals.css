@@ -2,15 +2,26 @@
 
 :root {
   --color-bg: #ffffff;
-  --color-bg-soft: #f7f7fb;
+  --color-bg-soft: #f3faf6;
   --color-surface: #ffffff;
-  --color-border: #e5e5ee;
-  --color-text: #14141f;
-  --color-text-soft: #55556b;
-  --color-accent: #5b4bf5;
-  --color-accent-hover: #4a3ce0;
-  --color-accent-soft: #eeecfe;
+  --color-border: #dceae1;
+  --color-text: #14201b;
+  --color-text-soft: #4b5d54;
+
+  /* Vert — couleur principale (boutons, liens actifs, focus) */
+  --color-accent: #0b7a4c;
+  --color-accent-hover: #08633c;
+  --color-accent-soft: #e3f5ec;
   --color-accent-contrast: #ffffff;
+
+  /* Bleu — accent secondaire (logo, éléments "tech") */
+  --color-blue: #1462a8;
+  --color-blue-soft: #e6f0fa;
+
+  /* Jaune — accent tertiaire (mise en avant, étoiles, bandeau CTA) */
+  --color-yellow: #e8a317;
+  --color-yellow-ink: #7a5200;
+  --color-yellow-soft: #fbefd6;
 }
 
 @theme inline {
@@ -24,6 +35,11 @@
   --color-accent-hover: var(--color-accent-hover);
   --color-accent-soft: var(--color-accent-soft);
   --color-accent-contrast: var(--color-accent-contrast);
+  --color-blue: var(--color-blue);
+  --color-blue-soft: var(--color-blue-soft);
+  --color-yellow: var(--color-yellow);
+  --color-yellow-ink: var(--color-yellow-ink);
+  --color-yellow-soft: var(--color-yellow-soft);
   --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-inter);
 }
@@ -58,4 +74,10 @@ select:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* Fond vert plein (footer) : un anneau de focus vert y serait invisible. */
+footer a:focus-visible,
+footer button:focus-visible {
+  outline-color: #ffffff;
 }

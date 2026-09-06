@@ -33,11 +33,11 @@ export default function About() {
           </p>
         </div>
 
-        <div className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-bg-soft)] p-8">
+        <div className="rounded-3xl bg-[var(--color-accent)] p-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-1">
-            <StatCounter value={profile.stats.projects} label="Projets réalisés" />
-            <StatCounter value={profile.stats.yearsExperience} label="Années d'expérience" />
-            <StatCounter value={profile.stats.clients} label="Clients accompagnés" />
+            <StatCounter value={profile.stats.projects} label="Projets réalisés" light />
+            <StatCounter value={profile.stats.yearsExperience} label="Années d'expérience" light />
+            <StatCounter value={profile.stats.clients} label="Clients accompagnés" light />
           </div>
         </div>
       </div>

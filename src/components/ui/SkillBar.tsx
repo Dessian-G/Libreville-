@@ -21,18 +21,35 @@ const SKILL_ICONS: Record<string, LucideIcon> = {
   MessagesSquare,
 };
 
+type Variant = "green" | "blue" | "yellow";
+
+const BADGE_CLASSES: Record<Variant, string> = {
+  green: "bg-[var(--color-accent-soft)] text-[var(--color-accent)]",
+  blue: "bg-[var(--color-blue-soft)] text-[var(--color-blue)]",
+  yellow: "bg-[var(--color-yellow-soft)] text-[var(--color-yellow-ink)]",
+};
+
+const FILL_CLASSES: Record<Variant, string> = {
+  green: "bg-[var(--color-accent)]",
+  blue: "bg-[var(--color-blue)]",
+  yellow: "bg-[var(--color-yellow)]",
+};
+
 interface SkillBarProps {
   skill: Skill;
+  variant?: Variant;
 }
 
-export default function SkillBar({ skill }: SkillBarProps) {
+export default function SkillBar({ skill, variant = "green" }: SkillBarProps) {
   const Icon = SKILL_ICONS[skill.icon];
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
       <div className="flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-[var(--color-accent)]">
+        <span
+          className={`flex h-10 w-10 items-center justify-center rounded-full ${BADGE_CLASSES[variant]}`}
+        >
           {Icon && <Icon size={20} aria-hidden="true" />}
         </span>
         <p className="font-semibold text-[var(--color-text)]">{skill.name}</p>
@@ -51,7 +68,7 @@ export default function SkillBar({ skill }: SkillBarProps) {
           whileInView={{ width: `${skill.level}%` }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: shouldReduceMotion ? 0 : 1, ease: "easeOut" }}
-          className="h-full rounded-full bg-[var(--color-accent)]"
+          className={`h-full rounded-full ${FILL_CLASSES[variant]}`}
         />
       </div>
     </div>

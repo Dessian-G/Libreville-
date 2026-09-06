@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "outline" | "ghost" | "onAccent";
+type Variant = "primary" | "outline" | "ghost";
 
 interface BaseProps {
   variant?: Variant;
@@ -23,7 +23,6 @@ const VARIANT_CLASSES: Record<Variant, string> = {
   outline:
     "border border-[var(--color-border)] text-[var(--color-text)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]",
   ghost: "text-[var(--color-text)] hover:text-[var(--color-accent)]",
-  onAccent: "bg-white text-[var(--color-accent)] hover:bg-white/90",
 };
 
 const BASE_CLASSES =

@@ -27,17 +27,28 @@ const SERVICE_ICONS: Record<string, LucideIcon> = {
   Cpu,
 };
 
+type Variant = "green" | "blue" | "yellow";
+
+const BADGE_CLASSES: Record<Variant, string> = {
+  green: "bg-[var(--color-accent-soft)] text-[var(--color-accent)]",
+  blue: "bg-[var(--color-blue-soft)] text-[var(--color-blue)]",
+  yellow: "bg-[var(--color-yellow-soft)] text-[var(--color-yellow-ink)]",
+};
+
 interface ServiceCardProps {
   service: Service;
+  variant?: Variant;
 }
 
-export default function ServiceCard({ service }: ServiceCardProps) {
+export default function ServiceCard({ service, variant = "green" }: ServiceCardProps) {
   const [expanded, setExpanded] = useState(false);
   const Icon = SERVICE_ICONS[service.icon];
 
   return (
     <div className="flex flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-[var(--color-accent)]">
+      <span
+        className={`flex h-11 w-11 items-center justify-center rounded-full ${BADGE_CLASSES[variant]}`}
+      >
         {Icon && <Icon size={22} aria-hidden="true" />}
       </span>
 

@@ -44,11 +44,13 @@ export const founders: [Founder, Founder] = [
 export const profile: AgencyProfile = {
   name: "Libreville Digital.IA",
   headline: "Un studio digital basé à Libreville et à Fort Worth, Texas",
-  // TODO: présentation courte du studio et du duo fondateur (2-3 lignes, Hero) à fournir.
-  tagline: "",
-  // TODO: texte de présentation « À propos » (parcours, naissance du studio,
-  // domaines d'intervention, types de clients) à fournir.
-  about: "",
+  // Rédaction de démarrage (voir CLAUDE.md §13) — à ajuster librement.
+  tagline:
+    "Nous aidons entrepreneurs, PME et institutions à exister en ligne : sites web, identité visuelle et solutions IA, pensés et livrés par une équipe basée à Libreville comme à Fort Worth.",
+  // Rédaction de démarrage — positionnement générique, aucun fait précis
+  // inventé (pas de date de création, pas de nom de client). À ajuster.
+  about:
+    "Libreville Digital.IA est né de la rencontre entre deux passionnés du numérique, l'un basé à Libreville, l'autre à Fort Worth. Nous combinons design, développement et intelligence artificielle pour accompagner entrepreneurs, commerçants et institutions dans la construction de leur présence en ligne — du premier site vitrine aux solutions plus avancées propulsées par l'IA. Cette double implantation, entre l'Afrique centrale et les États-Unis, nous permet de rester à l'écoute de nos clients sur une large plage horaire, tout en gardant un regard sur les usages numériques des deux continents.",
   locations: ["Libreville, Gabon", "Fort Worth, Texas"],
   logo: "/logo.svg", // TODO: logo à déposer dans public/
   email: "librevilledigitalia@gmail.com",

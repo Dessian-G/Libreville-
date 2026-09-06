@@ -23,13 +23,16 @@ export interface AgencyProfile {
   socials: { name: string; url: string; icon: string }[];
 }
 
-// TODO (par fondateur) : nom de famille, rôle précis, photo (à déposer dans
-// public/images/fondateurs/) et bio (1-2 phrases) à fournir. Ne rien inventer.
+// TODO (par fondateur) : photo (à déposer dans public/images/fondateurs/).
+// Gontran : nom de famille, rôle précis et bio restent à fournir.
 export const founders: [Founder, Founder] = [
   {
     firstName: "Maxime",
+    lastName: "Guiro",
+    role: "Designer graphique · Développeur web · UI/UX Designer · Intelligence artificielle",
     city: "Fort Worth, Texas",
     photo: "", // TODO: chemin vers public/images/fondateurs/maxime.jpg
+    bio: "Professionnel du digital polyvalent, il transforme une idée en solution numérique complète — de la conception visuelle à la réalisation technique — en combinant design graphique, développement web, UI/UX et intelligence artificielle.",
   },
   {
     firstName: "Gontran",

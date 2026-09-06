@@ -4,8 +4,6 @@ import StatCounter from "@/components/ui/StatCounter";
 import { profile } from "@/data/profile";
 
 export default function About() {
-  const [maxime, gontran] = profile.founders;
-
   return (
     <section id="a-propos" className="mx-auto max-w-6xl px-6 py-24">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start">
@@ -17,9 +15,15 @@ export default function About() {
               "TODO — texte de présentation « À propos » à rédiger (parcours, naissance du studio, domaines d'intervention, types de clients accompagnés)."}
           </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <FounderCard founder={maxime} />
-            <FounderCard founder={gontran} />
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {profile.founders.map((founder) => (
+              <div key={founder.firstName}>
+                <FounderCard founder={founder} />
+                {founder.bio && (
+                  <p className="mt-3 text-sm text-[var(--color-text-soft)]">{founder.bio}</p>
+                )}
+              </div>
+            ))}
           </div>
 
           <p className="mt-8 rounded-2xl bg-[var(--color-accent-soft)] p-4 text-sm text-[var(--color-text)]">
